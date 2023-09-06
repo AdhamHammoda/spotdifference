@@ -1,7 +1,7 @@
 
 var level=2;
 
-window.onload=function()
+function f()
 {
     let img=document.getElementById("img");
     img.innerHTML='';
@@ -47,18 +47,28 @@ window.onload=function()
         devimage2.style.left=str1;
         devimage2.style.top=str2;
         img.appendChild(devimage2);
+        
     }  
+    
     // level++;
     // const tm=window.setTimeout('window.onload()',10000);
     // window.onload();
     
 }
+window.onload=f;
 
 
 function trigger()
 {
+    document.addEventListener("keydown", function(event)
+    {
+        var k=event.code;
+        console.log(k);
+        if(k==='Enter' || k==='Space') {
+           event.preventDefault();
+        } 
+    });
     level++;
     alert("GAAAAAAMMMMMEDDDD");
-    window.onload();
-    // return;
+    f();
 }

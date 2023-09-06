@@ -1,5 +1,6 @@
 var level = 2;
 function f() {
+    console.log(level);
     var img = document.getElementById("img");
     img.innerHTML = '';
     var outtext = document.getElementById("text1");
@@ -44,7 +45,17 @@ function f() {
 }
 window.onload = f;
 function trigger() {
+    document.addEventListener("keydown", function (event) {
+        var k = event.key;
+        console.log(k);
+        if (k === 'Enter' || k === ' ') {
+            event.preventDefault();
+        }
+    });
     level++;
+    var img = document.getElementById("img");
+    img.innerHTML = '';
+    console.log(img);
     alert("GAAAAAAMMMMMEDDDD");
     f();
 }
