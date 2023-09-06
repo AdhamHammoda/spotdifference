@@ -53,9 +53,6 @@ function trigger() {
         }
     });
     level++;
-    var img = document.getElementById("img");
-    img.innerHTML = '';
-    console.log(img);
     alert("GAAAAAAMMMMMEDDDD");
     f();
 }
